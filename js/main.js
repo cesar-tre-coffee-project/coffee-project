@@ -1,10 +1,23 @@
 "use strict"
 console.log(`hello from main.js`);
+let coffeeCards = document.querySelector('#coffees');
+const searchBar = document.getElementById('search');
+let roastSelection = document.querySelector('#roast-selection');
+const submitCoffee = document.querySelector('#addSubmit');
+const addBar = document.getElementById('addCoffee');
+let addRoast = document.querySelector('#roast-addition');
+
 function renderCoffee(coffee) {
-    var html = '<div>';
-    html += '<h2>' + coffee.name + '</h2>';
-    html += '<p>' + coffee.roast + '</p>';
-    html += '</div>'
+    // var html = '<div>';
+    // html += '<h2>' + coffee.name + '</h2>';
+    // html += '<p>' + coffee.roast + '</p>';
+    // html += '</div>';
+    let html = `
+        <div class="coffee-card">
+            <h2>${coffee.name}</h2>
+            <p>${coffee.roast}</p>
+        </div>
+    `;
     return html;
 }
 
@@ -18,18 +31,36 @@ function renderCoffees(coffees) {
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (selectedRoast === 'all') {
-            filteredCoffees.push(coffee);
-        }
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
+    let selectedRoast = roastSelection.value.toLowerCase();
+    let searchInput = searchBar.value;
 
-    });
-    coffeeCards.innerHTML = renderCoffees(filteredCoffees);
+    let filteredCoffees = coffees;
+    // coffees.forEach(function(coffee) {
+    //     if (selectedRoast === 'all') {
+    //         filteredCoffees.push(coffee);
+    //     }
+    //     if (coffee.roast === selectedRoast) {
+    //         filteredCoffees.push(coffee);
+    //     }
+    //
+    // });
+    if (selectedRoast !== 'all') {
+        filteredCoffees = filteredCoffees.filter(function(coffee){
+            return coffee.roast.toLowerCase() === selectedRoast;
+        })
+    }
+    if (searchInput !== '') {
+        filteredCoffees = filteredCoffees.filter(function(coffee){
+            return coffee.name.toLowerCase().includes(searchInput);
+        })
+    }
+    if (filteredCoffees.length === 0) {
+        coffeeCards.innerHTML = `
+            <h3>No coffees were found</h3>
+        `
+    } else {
+        coffeeCards.innerHTML = renderCoffees(filteredCoffees);
+    }
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -50,13 +81,17 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-var coffeeCards = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
-
 coffeeCards.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+searchBar.addEventListener('input', updateCoffees);
 
 // ====================================================================================
 
+function addCoffee (e) {
+    e.preventDefault();
+    let newCoffee = {id: coffees.length + 1, name: addBar.value, roast: addRoast.value};
+    coffees.push(newCoffee);
+    coffeeCards.innerHTML = renderCoffees(coffees);
+}
+submitCoffee.addEventListener('click', addCoffee);

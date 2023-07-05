@@ -8,7 +8,24 @@
 /*    padding: 5px 10px;*/
 /*}*/
 body{
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat; background-size: cover;
     background-image: url('https://img.freepik.com/premium-photo/cups-coffee-brown-paper_41050-2522.jpg?w=1480');
-    max-height: 1080px;
+    /*max-height: 1080px;*/
 
+}
+
+.coffee-card {
+    width: calc(33.33% - 30px);
+}
+
+@media screen and (max-width: 700px) {
+    .coffee-card {
+        width: 100%;
+    }
+}
+
+.border {
+    border-bottom: solid black 0.25rem;
 }
