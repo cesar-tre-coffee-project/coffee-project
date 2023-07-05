@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 <div class="page-wrapper">
-<!--    -->
+    <!--    -->
 
     <div class="container">
         <h1>Coffee!</h1>
         <div class="row">
             <div class="column">
-<!--             This is the search coffee form-->
+                <!--             This is the search coffee form-->
 
-                <form class="column">
+                <form>
                     <label for="roast-selection">Roast</label>
                     <select id="roast-selection">
                         <option selected>all</option>
@@ -26,14 +27,15 @@
                         <option>medium</option>
                         <option>dark</option>
                     </select>
-                    <input id="submit" type="submit" />
+                    <input id="submit" type="submit"/>
                     <div>
                         <input type="text" id="search" name="search" placeholder="search">
                     </div>
                 </form>
-<!--                This is the add coffee form -->
-
-                <form class="column">
+            </div>
+            <!--                This is the add coffee form -->
+            <div class="column">
+                <form>
                     <h2>Add a Coffee</h2>
                     <label for="roast-addition">Roast</label>
                     <select id="roast-addition">
@@ -41,7 +43,7 @@
                         <option>medium</option>
                         <option>dark</option>
                     </select>
-                    <input id="addSubmit" type="submit" />
+                    <input id="addSubmit" type="submit"/>
                     <div>
                         <input type="text" id="addCoffee" name="addCoffee" placeholder="add coffee">
                     </div>
@@ -50,7 +52,6 @@
         </div>
     </div>
 
-
     <div class="container">
         <div class="row">
             <div class="column">
@@ -58,10 +59,20 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<!--<div class="container">-->
+<!--    <div class="row">-->
+<!--        <div class="column">-->
+<!--            <div id="coffees"></div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 </div>
-    <script src="js/main.js"></script>
-    <script src="js/moreCoffee.js"></script>
+<script src="js/main.js"></script>
+<script src="js/moreCoffee.js"></script>
 </body>
 </html>
