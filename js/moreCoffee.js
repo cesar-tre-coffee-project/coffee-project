@@ -1,6 +1,9 @@
 "use strict";
 console.log(`hello from moreCoffee.js`);
 
+// =================================================================================================
+// Event listener for search bar
+
 const searchBar = document.getElementById('search');
 
 function updatedSearch1 () {
@@ -23,3 +26,5 @@ searchBar.addEventListener('input', updatedSearch1);
 /*
 Remember, this event listener only fires up once there is input.
  */
+// =================================================================================================
+

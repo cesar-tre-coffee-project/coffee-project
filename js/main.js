@@ -2,10 +2,8 @@
 console.log(`hello from main.js`);
 function renderCoffee(coffee) {
     var html = '';
-    // html += '<td>' + coffee.id + '</td>';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
-
     return html;
 }
 
@@ -22,9 +20,13 @@ function updateCoffees(e) {
     var selectedRoast = roastSelection.value;
     var filteredCoffees = [];
     coffees.forEach(function(coffee) {
+        if (selectedRoast === 'all') {
+            filteredCoffees.push(coffee);
+        }
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+
     });
     coffeeCards.innerHTML = renderCoffees(filteredCoffees);
 }
