@@ -1,9 +1,10 @@
 "use strict"
 console.log(`hello from main.js`);
 function renderCoffee(coffee) {
-    var html = '';
+    var html = '<div>';
     html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
+    html += '</div>'
     return html;
 }
 
