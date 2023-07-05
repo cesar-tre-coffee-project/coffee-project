@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Coffee Project</title>
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="resets.css">
     <link rel="stylesheet" href="style.css">
@@ -10,10 +10,14 @@
 </head>
 <body>
 <div class="page-wrapper">
+<!--    -->
+
     <div class="container">
+        <h1>Coffee!</h1>
         <div class="row">
-            <div class="column align-center">
-                <h1>Coffee!</h1>
+            <div class="column">
+<!--             This is the search coffee form-->
+
                 <form class="column">
                     <label for="roast-selection">Roast</label>
                     <select id="roast-selection">
@@ -25,6 +29,21 @@
                     <input id="submit" type="submit" />
                     <div>
                         <input type="text" id="search" name="search" placeholder="search">
+                    </div>
+                </form>
+<!--                This is the add coffee form -->
+
+                <form class="column">
+                    <h2>Add a Coffee</h2>
+                    <label for="roast-addition">Roast</label>
+                    <select id="roast-addition">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                    <input id="addSubmit" type="submit" />
+                    <div>
+                        <input type="text" id="addCoffee" name="addCoffee" placeholder="add coffee">
                     </div>
                 </form>
             </div>
