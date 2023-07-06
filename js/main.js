@@ -20,10 +20,12 @@ function renderCoffee(coffee) {
    }
     let html = `
         <div class="coffee-card">
+        <div class="row cesar justify-center">
             <h2>${coffee.name}</h2>
-            <p>${coffee.roast}</p>
+            <p class="coffee-paragraph">${coffee.roast}</p>
+        </div>
             <img class="image-timer" src="${roastImage}" alt="coffee">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quibusdam?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta doloremque esse veritatis.</p>
         </div>
     `;
     return html;
