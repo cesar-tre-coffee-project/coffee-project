@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Coffee Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="resets.css">
     <link rel="stylesheet" href="style.css">
@@ -11,9 +14,9 @@
 
 <body>
 <div class="page-wrapper">
-    <!--    -->
+    <!--    LOGO IMAGE-->
     <div class="container">
-        <a href=""><img src="https://i.pinimg.com/564x/01/fe/4c/01fe4cd0c9cd8d9882cad61b93a773f9.jpg"></a>
+        <a href=""><img src="https://i.pinimg.com/564x/01/fe/4c/01fe4cd0c9cd8d9882cad61b93a773f9.jpg" id="logo"></a>
 
     </div>
 <!--    Border on top-->
@@ -30,7 +33,7 @@
             <div class="column shrink">
                 <form>
                     <h2 class="coffee-subheader">Search for Coffee</h2>
-                    <label for="roast-selection">Roast</label>
+                    <label for="roast-selection" class="roast-menu">Roast</label>
                     <select id="roast-selection" class="coffee-selects">
                         <option selected>all</option>
                         <option>light</option>
@@ -45,7 +48,7 @@
             <div class="column shrink">
                 <form>
                     <h2 class="coffee-subheader">Add a Coffee</h2>
-                    <label for="roast-addition">Roast</label>
+                    <label for="roast-addition" class="roast-menu">Roast</label>
                     <select id="roast-addition" class="coffee-selects">
                         <option>light</option>
                         <option>medium</option>
@@ -59,6 +62,7 @@
         </div>
     </div>
 
+<!--    COFFEE cards containers-->
     <div class="container">
         <div class="row">
             <div class="column">
@@ -68,10 +72,10 @@
         </div>
 
     </div>
+
 </div>
 
 
 <script src="js/main.js"></script>
-<!--<script src="js/circlesTimer.js"></script>-->
 </body>
 </html>
