@@ -1,12 +1,4 @@
-/*table {*/
-/*    border-collapse: collapse;*/
-/*    margin: 15px 0;*/
-/*}*/
 
-/*td, th {*/
-/*    border: 1px solid black;*/
-/*    padding: 5px 10px;*/
-/*}*/
 body{
     background-position: center center;
     background-attachment: fixed;
@@ -17,8 +9,19 @@ body{
 }
 
 .coffee-card {
-    width: calc(33.33% - 30px);
+    width: calc(40% - 10px);
     color:#666362 ;
+    text-align: center;
+    /*border: 0.25rem solid black;*/
+    /*border-width: thin;*/
+
+    opacity: 0.8;
+    border-radius: 20%;
+
+}
+
+.coffee-subheader {
+    text-align: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -34,9 +37,6 @@ body{
     max-width: 850px;
     opacity: 0.8;
     border-width: thin;
-
-
-
 }
 img {
 
@@ -61,12 +61,7 @@ box2 {
 
 
 h2 {
-
-    font-family: Futura;
+    font-family: Futura, serif;
     font-weight: 2;
 }
 
-label{
-    background-image: url(IMAGE-URL-HERE);
-    background-size: 35px 35px;
-    background-position: center left;
