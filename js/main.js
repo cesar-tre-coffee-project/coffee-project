@@ -17,6 +17,8 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
+
 // local storage =================================
 (() => {
     let local = localStorage.getItem("latestCoffee");
@@ -27,6 +29,7 @@ var coffees = [
     }
 })()
 // ================================================
+
 
 let coffeeCards = document.querySelector('#coffees');
 const searchBar = document.getElementById('search');
