@@ -18,7 +18,7 @@ body{
 
 .coffee-card {
     width: calc(33.33% - 30px);
-    color: #D6983F;
+    color:#666362 ;
 }
 
 @media screen and (max-width: 700px) {
@@ -31,6 +31,9 @@ body{
     border-bottom: solid black 0.25rem;
     border-bottom-style: groove;
     padding-top: 20px;
+    max-width: 850px;
+    opacity: 0.8;
+    border-width: thin;
 
 
 
@@ -62,3 +65,8 @@ h2 {
     font-family: Futura;
     font-weight: 2;
 }
+
+label{
+    background-image: url(IMAGE-URL-HERE);
+    background-size: 35px 35px;
+    background-position: center left;
