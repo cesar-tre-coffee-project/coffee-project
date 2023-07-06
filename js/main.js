@@ -23,6 +23,7 @@ function renderCoffee(coffee) {
             <h2>${coffee.name}</h2>
             <p>${coffee.roast}</p>
             <img class="image-timer" src="${roastImage}" alt="coffee">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quibusdam?</p>
         </div>
     `;
     return html;
