@@ -104,4 +104,5 @@ h2 {
 .coffee-paragraph{
     display: flex;
     align-items: center;
+    padding-top: 4.5px;
 }
