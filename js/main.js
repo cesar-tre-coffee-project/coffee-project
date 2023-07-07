@@ -51,6 +51,7 @@ function renderCoffee(coffee) {
    if (coffee.roast === 'dark') {
        roastImage = '../img/dark-roast.jpeg'
    }
+
     let html = `
         <div class="coffee-card">
         <div class="row cesar justify-center">
